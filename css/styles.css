@@ -1,0 +1,217 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7fa;
+    color: #2c3e50;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+form {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: scale(1.01);
+}
+
+form h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 25px;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+legend {
+    font-size: 1.4rem;
+    color: #2980b9;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 0.05em;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #34495e;
+    position: relative;
+}
+
+label::after {
+    content: "*";
+    color: #e74c3c;
+    font-size: 1.2rem;
+    margin-left: 5px;
+}
+
+/* Quitar asterisco en campos opcionales */
+label[for="alergias"]::after,
+label[for="medicacionActual"]::after {
+    content: "";
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: 1px solid #dcdfe3;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 8px rgba(41, 128, 185, 0.5);
+    outline: none;
+    background: #ffffff;
+}
+
+button {
+    background-color: #2980b9;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(41, 128, 185, 0.2);
+}
+
+button:hover {
+    background-color: #1c5980;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #12344e;
+    transform: translateY(0);
+}
+
+#addFamiliar {
+    background-color: #27ae60;
+    margin-top: -10px;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(39, 174, 96, 0.2);
+}
+
+#addFamiliar:hover {
+    background-color: #1c784b;
+}
+
+#addFamiliar:active {
+    background-color: #125032;
+}
+
+/* Modal Styles */
+#modalResumen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+}
+
+#contenidoResumen {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 90%;
+}
+
+#contenidoResumen h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contenidoResumen p {
+    font-size: 1rem;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+#cerrarResumen {
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+    width: 100px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+#cerrarResumen:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+    }
+
+    form h1 {
+        font-size: 2rem;
+    }
+
+    input, select, button {
+        font-size: 0.9rem;
+    }
+
+    legend {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

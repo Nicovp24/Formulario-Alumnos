@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro de Alumnos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <form id="registroAlumno">
+        <h1>Formulario de Registro de Alumnos</h1>
+
+        <!-- Datos del Alumno -->
+        <fieldset>
+            <legend>Datos del Alumno</legend>
+            <label for="nombreAlumno">Nombre:</label>
+            <input type="text" id="nombreAlumno" name="nombreAlumno" required>
+            
+            <label for="apellidosAlumno">Apellidos:</label>
+            <input type="text" id="apellidosAlumno" name="apellidosAlumno" required>
+            
+            <label for="nifAlumno">NIF:</label>
+            <input type="text" id="nifAlumno" name="nifAlumno" pattern="[0-9]{8}[A-Za-z]" required>
+            
+            <label for="lenguaMaternaAlumno">Lengua Materna:</label>
+            <select id="lenguaMaternaAlumno" name="lenguaMaternaAlumno" required></select>
+            
+            <label for="idiomasAlumno">Idiomas Conocidos:</label>
+            <select id="idiomasAlumno" name="idiomasAlumno" multiple required></select>
+        </fieldset>
+
+        <!-- Familiares Asociados -->
+        <fieldset id="familiares">
+            <legend>Familiares Asociados</legend>
+            <div id="familiarContainer">
+                <fieldset>
+                    <legend>Familiar 1</legend>
+                    <label for="nombreFamiliar-1">Nombre:</label>
+                    <input type="text" id="nombreFamiliar-1" required>
+
+                    <label for="apellidosFamiliar-1">Apellidos:</label>
+                    <input type="text" id="apellidosFamiliar-1" required>
+
+                    <label for="nifFamiliar-1">NIF:</label>
+                    <input type="text" id="nifFamiliar-1" pattern="[0-9]{8}[A-Za-z]" required>
+
+                    <label for="profesionFamiliar-1">Profesión:</label>
+                    <select id="profesionFamiliar-1" required></select>
+
+                    <label for="ciudadNacimientoFamiliar-1">Ciudad de Nacimiento:</label>
+                    <select id="ciudadNacimientoFamiliar-1" required></select>
+
+                    <label for="lenguaMaternaFamiliar-1">Lengua Materna:</label>
+                    <select id="lenguaMaternaFamiliar-1" required></select>
+
+                    <label for="idiomasFamiliar-1">Idiomas Conocidos:</label>
+                    <select id="idiomasFamiliar-1" multiple required></select>
+                </fieldset>
+            </div>
+            <button type="button" id="addFamiliar">Agregar Familiar</button>
+        </fieldset>
+
+        <!-- Dirección Actual -->
+        <fieldset>
+            <legend>Dirección Actual</legend>
+            <label for="pais">País:</label>
+            <select id="pais" name="pais" required></select>
+            
+            <label for="ciudad">Ciudad:</label>
+            <select id="ciudad" name="ciudad" required></select>
+            
+            <label for="poblacion">Población:</label>
+            <select id="poblacion" name="poblacion" required></select>
+            
+            <label for="direccionCompleta">Dirección Completa:</label>
+            <input type="text" id="direccionCompleta" required>
+            
+            <label for="codigoPostal">Código Postal:</label>
+            <input type="text" id="codigoPostal" pattern="[0-9]{5}" required>
+        </fieldset>
+
+        <!-- Datos Académicos -->
+        <fieldset>
+            <legend>Datos Académicos</legend>
+            <label for="colegioProcedencia">Colegio de Procedencia:</label>
+            <input type="text" id="colegioProcedencia" required>
+            
+            <label for="nivelEstudios">Nivel de Estudios Alcanzado:</label>
+            <select id="nivelEstudios" required></select>
+            
+            <label for="idiomasEstudiados">Idiomas Estudiados:</label>
+            <select id="idiomasEstudiados" multiple required></select>
+            
+            <label for="nivelEstudioSolicitado">Nivel de Estudio Solicitado:</label>
+            <select id="nivelEstudioSolicitado" required></select>
+        </fieldset>
+
+        <!-- Información Médica -->
+        <fieldset>
+            <legend>Información Médica</legend>
+            <label for="alergias">Alergias:</label>
+            <select id="alergias" multiple></select>
+            
+            <label for="medicacionActual">Medicación Actual:</label>
+            <input type="text" id="medicacionActual">
+        </fieldset>
+
+        <button type="submit">Registrar Alumno</button>
+    </form>
+
+    <!-- Modal para Resumen -->
+    <div id="modalResumen" style="display:none;">
+        <div id="contenidoResumen">
+            <h2>Resumen de Registro</h2>
+            <div id="resumen"></div>
+            <button id="cerrarResumen">Cerrar</button>
+        </div>
+    </div>
+</body>
+</html>
+

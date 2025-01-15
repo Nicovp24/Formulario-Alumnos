@@ -1,0 +1,15 @@
+{
+    "lenguas": ["Español", "Inglés", "Francés"],
+    "idiomas": ["Español", "Inglés", "Francés", "Alemán", "Chino"],
+    "profesiones": ["Profesor", "Ingeniero", "Médico", "Abogado"],
+    "paises": {
+        "España": {
+            "Madrid": ["Centro", "Alcobendas"],
+            "Barcelona": ["Mediona", "Badalona"],
+            "Sevilla": ["Dos Hermanas", "Gines"]
+        }  
+    },
+    "niveles": ["Primaria", "Secundaria", "Bachillerato", "Universidad"],
+    "alergias": ["Polen", "Gluten", "Lácteos", "Mariscos"]
+}
+
